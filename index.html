@@ -7,8 +7,9 @@
 </head>
 <body>
 
-    Lines : 
-    <input id="lines" placeholder="Input Some Value"> <br>
+    <h2>Lines : 
+    <input id="lines" style="width: 400px; height: 25px;" placeholder="Input Some Value"> <br>
+    </h2>
 
     <pre id="output"></pre>
 
@@ -17,12 +18,16 @@
         const lines = document.getElementById('lines');
 
         lines.oninput = function() {
-            let line = document.getElementById('lines').value ,
+            let line = parseInt(document.getElementById('lines').value)+1 ,
             output = document.getElementById('output');
             let total=0, pattern="", char=line;
 
+            if (line>=50) {
+                pattern="<h2 style='color:red;'>If you see a blank page or the side of the star tree, minimize the website.</h2>"
+            }
+
             for (i=1; i<=line; i++){
-                total = total + i;
+                total = total + i-1;
                 
                 for (k=0; k<=char; k++) {
                     pattern += " ";
@@ -38,10 +43,9 @@
                 pattern += "<br>"
 
 
-
             }
 
-            output.innerHTML = `<h3 style="color: rgb(0, 154, 14)">Total Star Count:  ${total}  </h3><br>  ${pattern}` ;
+            output.innerHTML = `<h2 style="color: rgb(0, 154, 14)">Total Star Count:  ${total}  </h2> ${pattern}` ;
 
 
         }
