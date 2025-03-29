@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Tree Generator</title>
+</head>
+<body>
+
+    Lines : 
+    <input id="lines" placeholder="Input Some Value"> <br>
+
+    <pre id="output"></pre>
+
+    <script>
+
+        const lines = document.getElementById('lines');
+
+        lines.oninput = function() {
+            let line = document.getElementById('lines').value ,
+            output = document.getElementById('output');
+            let total=0, pattern="", char=line;
+
+            for (i=1; i<=line; i++){
+                total = total + i;
+                
+                for (k=0; k<=char; k++) {
+                    pattern += " ";
+                };
+
+                for (k=char; k<=line-1; k++){
+                    pattern += "* ";
+                };
+
+                char--;
+
+
+                pattern += "<br>"
+
+
+
+            }
+
+            output.innerHTML = `<h3 style="color: rgb(0, 154, 14)">Total Star Count:  ${total}  </h3><br>  ${pattern}` ;
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
