@@ -4,7 +4,7 @@ A simple web-based tool that generates a star tree pattern based on user input.
 
 ## Live Demo
 
-## 🚀 **[Star Tree Generator](https://dinethpansiluw.github.io/StarPatternGenerator2-forFun/)**
+# 🚀 **[Star Tree Generator](https://dinethpansiluw.github.io/StarPatternGenerator2-forFun/)**
 
 ## Features
 - Generates a star tree pattern based on user input
